@@ -1,0 +1,125 @@
+<!doctype html/>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8"/>
+  <title>DoguinhoTrainning</title>
+  <style>
+  body{font-family: Sans-Serif;
+    background: white;
+    transiton:0.5s;
+  }
+  .header{
+    border-bottom:3px solid lightgreen;
+    margin:1px;
+    display:flex;
+  }
+  .aboutButton{
+    background:none;
+    color:black;
+    border:none;
+    margin-left:5px;
+    border-radius:20px;
+    
+  }
+  .aboutButton:active{
+    background:lightgrey;
+    transition: background 0.1s;
+  }
+  .main{margin-top:20px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-end;
+  }
+  .dialog{
+    position:fixed;
+    top:80px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px black;
+    background:rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    display:none;
+    
+  }
+  .viewProjectsButton{
+    background:lightgreen;
+    font-weight:bold;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:20px;
+  }
+  .viewProjectsButton:active{
+    background:green;
+    transition:background 0.5s;
+  }
+  .okButton{
+    margin-left:80%;
+    background:none;
+    color:lightgreen;
+    font-weight:bold;
+    border:none;
+    margin-bottom:10px;
+    padding:10px;
+    width:60px;
+    border-radius:20px;
+  }
+  .okButton:active{
+    background:lightgrey;
+    transition: background 0.1s;
+  }
+  .clickerButton{
+    border-radius: 50px;
+    background:lightgreen;
+    color:white;
+    width:200px;
+    height:200px;
+    font-size:20px;
+    border:none;
+  }
+  .clickerButton:active{
+    background:green;
+    border-radius: 50px;
+    transition: background 0.1s
+  }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>DoguinhoTrainning</h1>
+    <button class="aboutButton">about</button>
+  </div>
+  <div class="main">
+    <button class="clickerButton">
+      Click me!
+    </button>
+    <div class="dialog">
+      <p>DoguinhoTrainning is a app that allows you to train your dog.</p>
+      <p>Created by Sandão</p>
+      <a href="https://sandao2005.github.io" class="viewMoreProjectsButton">View more projects</a>
+      <br>
+      <button class="okButton">Ok</button>
+    </div>
+  <div class="footer">
+    
+  </div>
+  <script>
+   var aboutButton = document.querySelector(".aboutButton");
+aboutButton.addEventListener("click", function() {
+  document.querySelector(".dialog").style.display = "block";
+});
+
+  
+ var okButton=document.querySelector(".okButton");
+  okButton.addEventListener("click", function(){
+    document.querySelector(".dialog").style.display="none";
+  });
+  
+  var dogClickerSound = new Audio("Sounds/dog clicker sound.wav");
+  var clickerButton=document.querySelector(".clickerButton");
+   clickerButton.addEventListener("click", function(){
+     dogClickerSound.play();
+   });
+  </script>
+</body>
+</html>
