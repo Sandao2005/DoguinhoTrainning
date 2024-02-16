@@ -1,43 +1,42 @@
 <!doctype html/>
 <html lang="en-US">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8"/>
   <title>DoguinhoTrainning</title>
   <style>
   body{font-family: Sans-Serif;
     background: white;
-    transiton:0.5s;
+    transiton:0.1s;
+    background: black;
+    color:white;
   }
   .header{
-    border-bottom:3px solid lightgreen;
-    margin:1px;
     display:flex;
   }
   .aboutButton{
     background:none;
-    color:black;
+    color:white;
     border:none;
     margin-left:5px;
     border-radius:20px;
     
   }
   .aboutButton:active{
-    background:lightgrey;
+    background:grey;
     transition: background 0.1s;
   }
   .main{margin-top:20px;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:flex-end;
+    display:grid;
+    place-items: center;
+    place-content: center;
   }
   .dialog{
     position:fixed;
-    top:80px;
+    width:250px;
     border-radius:10px;
-    box-shadow:0px 0px 10px black;
-    background:rgba(255,255,255,0.5);
-    backdrop-filter: blur(5px);
+    box-shadow:0px 0px 20px white;
+    background:#2e2e2e;
     display:none;
     
   }
@@ -63,10 +62,12 @@
     padding:10px;
     width:60px;
     border-radius:20px;
+    
   }
   .okButton:active{
     background:lightgrey;
     transition: background 0.1s;
+    
   }
   .clickerButton{
     border-radius: 50px;
@@ -76,6 +77,7 @@
     height:200px;
     font-size:20px;
     border:none;
+    
   }
   .clickerButton:active{
     background:green;
@@ -94,6 +96,7 @@
       Click me!
     </button>
     <div class="dialog">
+      <h3>About DoguinhoTrainning</h3>
       <p>DoguinhoTrainning is a app that allows you to train your dog.</p>
       <p>Created by Sandão</p>
       <a href="https://sandao2005.github.io" class="viewMoreProjectsButton">View more projects</a>
